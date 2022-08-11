@@ -1,0 +1,41 @@
+@import "@/styles/imports";
+
+.tabs {
+  column-gap: 20%;
+  @include flex(space-between, center, nowrap);
+
+  @include media("<=mobile") {
+    @include flex(flex-start, flex-end, column);
+    row-gap: 1.5rem;
+    position: relative;
+  }
+}
+
+.tabs_container {
+  flex-grow: 1;
+  border: 1px solid $col-black-700;
+  @include grid(repeat(3, 1fr), 0, 0.5rem);
+
+  @include media("<=mobile") {
+    width: 100%;
+    order: 2;
+  }
+
+  .tabs_button {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.tabs_extra .tabs_cta {
+  @extend %btn-gold-200-outline;
+  
+  padding: 1.5rem 4rem;
+  border-radius: 2.81368px;
+
+  @include media("<=mobile") {
+    order: 1;
+    position: absolute;
+    top: -11rem;
+    right: 0;
+  }
+}

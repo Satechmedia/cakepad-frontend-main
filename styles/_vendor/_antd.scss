@@ -1,0 +1,68 @@
+@import "~antd/dist/antd.css";
+
+.ant-pagination.mini.ant-pagination-disabled {
+  opacity: 0.25;
+
+  .ant-pagination-item-active,
+  .ant-pagination-item-active:hover {
+    background-color: transparent;
+    border-color: transparent;
+
+    a {
+      color: $col-white;
+    }
+  }
+}
+
+.ant-pagination.mini {
+  @include media("<=tablet") {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .ant-pagination-item {
+    margin: 0 0.5rem;
+
+    &:hover {
+      background-color: $col-black-700;
+    }
+
+    a,
+    a:hover {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-style: normal;
+      color: $col-white;
+      font-family: $font-inter;
+    }
+  }
+
+  .ant-pagination-item-active,
+  .ant-pagination-item-active:hover {
+    background-color: $col-gold-200;
+    border-color: $col-gold-200;
+
+    a {
+      color: $col-black;
+      font-family: $font-inter;
+      font-style: normal;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+
+  .ant-pagination-jump-prev
+    .ant-pagination-item-container
+    .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next
+    .ant-pagination-item-container
+    .ant-pagination-item-ellipsis {
+    font-size: 1rem;
+    color: $col-white;
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    display: none;
+  }
+}

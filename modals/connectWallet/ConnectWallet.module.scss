@@ -1,0 +1,27 @@
+@import "@/styles/imports";
+
+.connect {
+  @include grid(repeat(3, 1fr), 3.2rem, 3.2rem);
+}
+
+.connect_box {
+  min-height: 10rem;
+  padding: 2rem 0.8rem;
+  border-radius: 5px;
+  background-color: $col-black-600;
+  border: 1px solid $col-black-200;
+
+  row-gap: 1.6rem;
+  @include flex(center, center, column);
+}
+
+.connect_icon {
+  width: 4.4rem;
+  height: 4.4rem;
+  position: relative;
+}
+
+.connect_text {
+  font-size: 1.4rem;
+  line-height: 2.117rem;
+}

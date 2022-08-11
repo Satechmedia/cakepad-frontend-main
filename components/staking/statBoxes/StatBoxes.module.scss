@@ -1,0 +1,50 @@
+@import "@/styles/imports";
+
+.grid {
+  margin: 0 -6.3rem;
+  @include grid(repeat(4, 1fr), 2.4rem, 2.4rem); 
+
+  @include media("<=tablet") {
+    margin: 0;
+    @include grid(repeat(2, 1fr), 2.4rem, 2.4rem); 
+  }
+
+  @include media("<=mobile") {
+    @include grid(1fr, 2.4rem, 2.4rem); 
+  }
+}
+
+.grid_box {
+  min-height: 12.4rem;
+  padding: 2.4rem;
+  border-radius: 5px;
+  gap: 0.8rem;
+  border: 1px solid $col-black-200;
+  background-color: $col-black-350;
+
+  @include flex(center, flex-start, column);
+}
+
+.grid_subtitle {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: $col-grey-50;
+  font-family: $font-inter;
+
+  @include media("<=tablet") {
+    font-size: 1.4rem;
+  }
+
+  @include media("<=mobile") {
+    font-size: 1.3rem;
+  }
+}
+
+.grid_title {
+  font-weight: 600;
+  font-size: 3.2rem;
+
+  @include media("<=mobile") {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,109 @@
+@import "@/styles/imports";
+
+.table {
+  margin-bottom: 4.5rem;
+}
+
+.table_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 4.4rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table_row {
+  min-width: 900px;
+}
+
+.table_th,
+.table_tr {
+  display: grid;
+  padding: 0 0.5rem;
+  grid-template-columns: 5% 18% 18% 18% 26% 15%;
+
+  border-top: 1px solid $col-black-200;
+}
+
+.table_image {
+  position: relative;
+  width: 4.4rem;
+  height: 4.4rem;
+}
+
+.table_thd {
+  height: 8.239rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 152.2%;
+  color: $col-grey-50;
+  
+  @include flex(flex-start, center);
+}
+
+.table_td {
+  height: 8.239rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 152.2%;
+
+  @include flex(flex-start, center);
+
+  &[data-color="blue"] {
+    color: $col-blue-100;
+  }
+}
+
+.table_filter {
+  width: 100% !important;
+}
+
+.table_filterWrapper {
+  padding: 0.2rem 0.4rem !important;
+  margin-left: 0;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 3.81864px !important;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+
+  @include media("<=mobile") {
+    margin-left: 0;
+    padding: 0.2rem 0.7rem;
+  }
+
+  span:last-of-type {
+    margin-left: 0.1rem;
+
+    @include media("<=mobile") {
+      font-size: 0.9rem;
+    }
+  }
+
+  span:first-of-type {
+    @include media("<=mobile") {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.table_filterInput {
+  all: unset !important;
+  max-width: 10rem !important;
+  padding: 0.5rem 0.4rem !important;
+  width: 1rem;
+  padding: 0;
+  color: $col-white !important;
+  opacity: 1;
+  font-weight: 600 !important;
+  color: $col-green-200 !important;
+  caret-color: transparent !important;
+}
+
+.table_filterCaret {
+  width: 1.7rem !important;
+  height: 1.7rem !important;
+  margin-right: auto !important;
+  margin-left: 1rem !important;
+}

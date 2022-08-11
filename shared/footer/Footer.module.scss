@@ -1,0 +1,67 @@
+@import "@/styles/imports";
+
+.footer {
+  padding: 2.3rem 6.4rem;
+  border-top: 1px solid $col-black-200;
+
+  @include flex(space-between, center);
+
+  @include media("<=mobile") {
+    @include flex(flex-start, flex-start, column-reverse);
+
+    gap: 8rem;
+    padding: 8rem 7% 0;
+  }
+}
+
+.footer_section {
+  @include flex(flex-start, center, row nowrap);
+
+  &:nth-child(2) {
+    gap: 2.4rem;
+
+    @include media("<=mobile") {
+      gap: 1rem;
+    }
+  }
+
+  &:nth-child(3) {
+    gap: 6.4rem;
+
+    @include media("<=mobile") {
+      gap: 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include media("<=mobile") {
+    &[data-copyright] {
+      margin: 0 -7%;
+      padding: 3rem 7%;
+      width: 114%;
+      background-color: $col-black;
+      @include flex(center, center);
+    }
+  }
+}
+
+.footer_text {
+  font-size: 1.2rem;
+  color: $col-grey-50;
+  font-family: $font-inter;
+
+  @include media("<=mobile") {
+    font-size: 1.9rem;
+  }
+}
+
+a.footer_text {
+  &:hover {
+    color: $col-white;
+  }
+
+  @include media("<=mobile") {
+    font-size: 2.4rem;
+  }
+}

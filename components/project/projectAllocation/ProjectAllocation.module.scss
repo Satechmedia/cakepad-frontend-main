@@ -1,0 +1,67 @@
+@import "@/styles/imports";
+
+.allocation {
+  padding: 3.3rem 4.5rem 4.3rem;
+  width: 100%;
+
+  background: $col-black-350;
+  border: 1px solid rgba($col-black-200, 0.7);
+  border-radius: 10px;
+
+  @include media("<=tablet") {
+    padding: 2rem 2.5rem 2.5rem;
+    min-width: 900px;
+  }
+}
+
+.allocation_table {
+  width: 100%;
+  @include flex(space-between, flex-start, column);
+}
+
+.allocation_tr {
+  width: 100%;
+  @include grid(5% 15% 10% 1fr 15% 10%, 2rem, 2rem);
+
+  &:not(:last-child) {
+    margin-bottom: 3.2rem;
+
+    @include media("<=tablet") {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.allocation_th {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.allocation_td {
+  font-weight: 500;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+  column-gap: 0.7rem;
+  @include flex(flex-start, center);
+
+  @include media("<=tablet") {
+    font-size: 1.9rem;
+  }
+
+  @include media("<=mobile") {
+    font-size: 1.6rem;
+  }
+}
+
+.allocation_tdDivider {
+  height: 1.2rem;
+  width: 1px;
+  background-color: rgba($col-white, 0.15);
+}
+
+
+.allocation_tbutton {
+  padding: 0.9rem 3.3rem 0.8rem;
+  border-radius: 20px;
+}

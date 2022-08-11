@@ -1,0 +1,108 @@
+@import "@/styles/imports";
+
+.card {
+  width: 100%;
+  min-height: 100%;
+  padding: 3.5rem 3rem;
+  border-radius: 25px;
+  border: 1px solid $col-gold-100;
+
+  @include flex(flex-start, space-between, column);
+}
+
+.card_details {
+  @include flex(space-between, flex-start);
+}
+
+.card_info {
+  column-gap: 1.7rem;
+  @include flex(flex-start, center);
+}
+
+.card_logo {
+  position: relative;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 0.2rem solid $col-white;
+  background-color: $col-white;
+}
+
+.card_subtitle,
+.card_priceLabel {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.card_subtitle {
+  text-transform: capitalize;
+}
+
+.card_title,
+.card_price {
+  @extend %title-32;
+
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card_priceWrap {
+  text-align: right;
+}
+
+.card_progress {
+  margin: 4.2rem 0;
+}
+
+.card_progressPrecent {
+  margin-bottom: 1.4rem;
+  @include flex(space-between, flex-start);
+
+  span {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  span:nth-of-type(2) {
+    color: $col-gold-400;
+  }
+}
+
+.card_progressExtra {
+  margin-top: 1.2rem;
+  @include flex(space-between, flex-start);
+
+  span {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+}
+
+.card_stats {
+  @include flex(space-between, flex-start);
+}
+
+.card_stat {
+  span {
+    display: block;
+  }
+
+  span:nth-of-type(1) {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  span:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+  }
+}
+
+.card_stat:nth-of-type(even) {
+  text-align: right;
+}

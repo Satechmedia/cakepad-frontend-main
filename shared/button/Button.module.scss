@@ -1,0 +1,55 @@
+@import "@/styles/imports";
+
+.gold-gradient {
+  @extend %btn-gold-gradient;
+}
+
+.gold-100 {
+  @extend %btn-gold-100;
+}
+
+.gold-100-outline {
+  @extend %btn-gold-100-outline;
+}
+
+.gold-150-outline {
+  @extend %btn-gold-150-outline;
+}
+
+.gold-200 {
+  @extend %btn-gold-200;
+}
+
+.gold-200-outline {
+  @extend %btn-gold-200-outline;
+}
+
+.gold-250 {
+  @extend %btn-gold-250;
+}
+
+.gold-faded {
+  @extend %btn-gold-faded;
+}
+
+.gold-brown {
+  @extend %btn-gold-brown;
+}
+
+.black-700 {
+  @extend %btn-black-700;
+}
+
+.green-200 {
+  @extend %btn-green-200
+}
+
+.transparent {
+  @extend %btn-transparent;
+}
+
+.button_icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+}

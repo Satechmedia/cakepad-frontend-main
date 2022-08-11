@@ -1,0 +1,125 @@
+@import "@/styles/imports";
+
+.hero {
+  height: 100vh;
+  position: relative;
+  @include flex(center, center);
+
+  @include media("<=mobile") {
+    padding: 5rem 4% 1.5rem;
+    height: 90rem;
+  }
+}
+
+.hero_inner {
+  height: fit-content;
+  @include flex(center, center, column);
+}
+
+.hero_text {
+  font-size: 9.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: $font-slab;
+
+  @include media("<=mobile") {
+    font-size: 5rem;
+  }
+}
+
+.hero_subtext {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 168.5%;
+  margin-bottom: 6.4rem;
+  width: 69.216rem;
+  text-align: center;
+  color: rgba($col-white, 0.84);
+  font-family: $font-sans;
+
+  @include media("<=mobile") {
+    // width: 80%;
+    width: 45rem;
+    font-size: 2.4rem;
+    margin-bottom: 4.4rem;
+  }
+}
+
+.hero_buttons {
+  gap: 2.8rem;
+  @include flex(center, center, row);
+
+  @include media("<=mobile") {
+    flex-wrap: wrap;
+    width: 45rem;
+    margin: auto;
+  }
+}
+
+.hero_cta {
+  width: 24.2rem;
+  height: 5.5rem;
+
+  &:nth-child(1) {
+    @extend %btn-gold-200;
+  }
+
+  &:nth-child(2) {
+    @extend %btn-white-outline;
+  }
+
+  @include media("<=mobile") {
+    width: 100%;
+    font-size: 2rem !important;
+    height: 6.5rem;
+  }
+}
+
+
+.hero_shape {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.hero_shape[data-type="circle"] {
+  width: 8.064rem;
+  height: 8.064rem;
+  top: 4.97rem;
+  left: 37.071rem;
+  z-index: 100;
+}
+
+.hero_shape[data-type="hexagon"] {
+  width: 8.41rem;
+  height: 7.28rem;
+  top: 11.895rem;
+  right: 20.757rem;
+}
+
+.hero_shape[data-type="diamond"] {
+  width: 6.18rem;
+  height: 8.777rem;
+  top: 33.234rem;
+  left: 10.622rem;
+}
+
+.hero_shape[data-type="semi-circle"] {
+  width: 12.44rem;
+  height: 6.22rem;
+  bottom: 10.612rem;
+  left: 25.298rem;
+}
+
+.hero_shape[data-type="square"] {
+  width: 10rem;
+  height: 10rem;
+  bottom: 0;
+  right: 44.999rem;
+}
+
+.hero_shape[data-type="triangle"] {
+  width: 10rem;
+  height: 10rem;
+  top: 52.73rem;
+  right: 5.41rem;
+}

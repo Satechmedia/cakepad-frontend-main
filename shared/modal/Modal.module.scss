@@ -1,0 +1,60 @@
+@import "@/styles/imports";
+
+.modal {
+  position: fixed;
+  inset: 0;
+  padding-top: 15.3rem;
+  background-color: rgba($col-black-600, 0.9);
+  z-index: z("level-four");
+
+  @include flex(flex-start, center, column);
+
+  &[data-close-button="false"] {
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+.modal_close {
+  width: fit-content;
+  margin-bottom: 2.5rem;
+}
+
+.modal_closeBtn {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.modal_body {
+  min-width: 50.4rem;
+  max-width: 50.4rem;
+  min-height: 21.4rem;
+  background-color: $col-black-350;
+  border: 1px solid $col-black-200;
+  border-radius: 10px;
+  padding: 2.4rem 4rem 4rem;
+}
+
+.modal_header {
+  row-gap: 1.2rem;
+  margin-bottom: 3.1rem;
+  @include flex(center, center, column);
+}
+
+.modal_title {
+  @extend %title-24;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+
+.modal_subtitle {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}

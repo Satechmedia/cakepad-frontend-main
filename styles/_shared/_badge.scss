@@ -1,0 +1,97 @@
+%badge {
+  min-width: 5rem;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  padding: 0.3rem 2rem;
+
+  display: grid;
+  place-items: center;
+
+  span {
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: 1.21rem;
+    position: relative;
+    top: 0.12rem;
+    font-family: $font-gilroy;
+  }
+}
+
+%badge-gold-100 {
+  @extend %badge;
+  background-color: $col-gold-100;
+
+  color: $col-black-700;
+}
+
+%badge-gold-100-outline {
+  @extend %badge;
+  background-color: transparent;
+  border-color: $col-gold-100;
+
+  color: $col-black-700;
+}
+
+%badge-gold-200 {
+  @extend %badge;
+  background-color: $col-gold-200;
+
+  color: $col-black-200;
+}
+
+%badge-gold-200-outline {
+  @extend %badge;
+  background-color: transparent;
+  border-color: $col-gold-200;
+
+  color: $col-white;
+}
+
+%badge-gold-gradient {
+  @extend %badge;
+  border-color: $col-gold-gradient;
+  background-color: $col-gold-gradient;
+
+  color: $col-black-650;
+}
+
+%badge-gold-faded {
+  @extend %badge;
+  border-color: transparent;
+  background-color: $col-gold-faded;
+
+  color: $col-gold-850;
+}
+
+%badge-black-700 {
+  @extend %badge;
+  background-color: $col-black-700;
+  border-color: $col-black-700;
+
+  color: $col-white;
+}
+
+%badge-black-700-outline {
+  @extend %badge;
+  background-color: transparent;
+  border-color: $col-black-700;
+
+  color: $col-white;
+}
+
+%badge-blue-100 {
+  @extend %badge;
+  background-color: $col-blue-100;
+  border-color: $col-blue-100;
+
+  color: $col-white;
+}
+
+%badge-transparent {
+  @extend %badge;
+  background-color: transparent;
+  border-color: transparent;
+
+  color: $col-white;
+}

@@ -1,0 +1,71 @@
+:root {
+  --insect-rem: 10 !important;
+}
+
+.insect {
+  gap: 0.8rem;
+
+  .insect_label {
+    font-size: 1.6rem;
+    line-height: 152.2%;
+    font-weight: 600;
+    color: $col-white;
+    font-family: $font-inter;
+
+    @include media("<=mobile") {
+      font-size: 14px !important;
+    }
+  }
+
+  .insect_wrapper {
+    border-radius: 9.04453px;
+    border: 1px solid $col-black-200;
+    background-color: $col-black-350;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+
+    @include media("<=mobile") {
+      padding-left: 2.1rem;
+      padding-right: 2.1rem;
+    }
+
+    &:focus-within {
+      border-color: $col-gold-faded;
+    }
+  }
+
+  .insect_input {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+
+    @include media("<=mobile") {
+      font-size: 16px;
+      line-height: 150%;
+      padding-top: 3.1rem;
+      padding-bottom: 3.1rem;
+    }
+
+    &::placeholder {
+      font: inherit;
+      color: $col-white;
+      opacity: 0.34;
+    }
+
+    &[type="select"] {
+      color: $col-white;
+    }
+  }
+
+  .insect_dd {
+    background: $col-black-350;
+    border: 1px solid $col-black-200;
+    border-radius: 5px;
+  }
+
+  .insect_dd-menu {
+    background: $col-black-350;
+  }
+}

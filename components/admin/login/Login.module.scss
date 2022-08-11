@@ -1,0 +1,86 @@
+@import "@/styles/imports";
+
+.login {
+  height: 100%;
+  padding: 5rem 10%;
+  @include flex(center, center, column);
+}
+
+.login_form {
+  row-gap: 2.4rem;
+  width: 42.3rem;
+  margin-top: 8rem;
+  @include flex(center, center, column);
+
+  @include media("<=mobile") {
+    width: 100%;
+  }
+}
+
+.login_formrow {
+  width: 100%;
+
+  small {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    top: 0.5rem;
+    color: rgba($col-red-100, 0.8);
+
+    &[data-show="false"] {
+      visibility: hidden;
+    }
+  }
+}
+
+.login_inputlabel {
+  font-size: 1.6rem;
+  color: $col-white;
+  font-family: $font-inter;
+
+  @include media("<=mobile") {
+    font-size: 2rem;
+  }
+}
+
+.login_inputwrapper,
+.login_inputwrapper__error {
+  overflow: hidden;
+  padding: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.login_inputwrapper__error {
+  border-color: rgba($col-red-100, 0.5) !important;
+}
+
+.login_inputfield {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 2.2rem 1.6rem !important;
+
+  @include media("<=mobile") {
+    font-size: 16px;
+    padding: 2.8rem;
+  }
+
+  &::placeholder {
+    font: inherit;
+    opacity: 0.5;
+    color: $col-grey-50;
+  }
+}
+
+.login_button {
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 2.2rem 1.6rem;
+  border-radius: 10px;
+  margin-top: calc(6.4rem - 2.4rem);
+
+  @include media("<=mobile") {
+    font-size: 2rem;
+    padding: 2.8rem;
+  }
+}

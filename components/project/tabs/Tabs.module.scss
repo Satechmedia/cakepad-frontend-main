@@ -1,0 +1,78 @@
+@import "@/styles/imports";
+
+.tabs {
+  // min-height: 49.9rem;
+  border-radius: 17.0728px;
+  overflow: hidden;
+  border: 0.853641px solid $col-black-200;
+
+  @include flex(flex-start, flex-start, column);
+}
+
+.tabs_buttons {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid $col-black-200;
+  @include grid(repeat(3, 1fr), 0, 0);
+}
+
+.tabs_button {
+  padding: 1.5rem 0;
+
+  &__active {
+    color: $col-gold-850;
+  }
+
+  @include media("<=tablet") {
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
+
+  @include media("<=mobile") {
+    font-size: 1.5rem;
+    padding: 2.5rem 0;
+  }
+}
+
+.tabs_indicator {
+  position: absolute;
+  height: 0.18rem;
+  width: 33.3333%;
+  bottom: 0;
+  background-color: $col-gold-850;
+  transition: all 0.2s ease-out;
+}
+
+.tabs_divider {
+  height: 5.4rem;
+  width: 100%;
+  margin-bottom: 0.69rem;
+
+  @include flex(center, flex-start);
+
+  span {
+    height: 100%;
+    width: 33.333%;
+    border-left: 1px solid $col-black-200;
+    border-right: 1px solid $col-black-200;
+  }
+}
+
+.tabs_content {
+  min-height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  padding: 0 5.95rem 8.54rem;
+
+  @include media("<=tablet") {
+    padding: 0 3.95rem 6.54rem;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    &::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0;
+    }
+  }
+}

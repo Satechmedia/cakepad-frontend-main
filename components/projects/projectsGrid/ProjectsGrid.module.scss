@@ -1,0 +1,14 @@
+@import "@/styles/imports";
+
+.projects {
+  margin: 6rem 0;
+  @include grid(repeat(auto-fill, minmax(34.0rem, 1fr)), 3rem, 3rem);
+
+  @include media("<=mobile") {
+    margin: 3rem 0 6rem;
+  }
+}
+
+.projects_empty {
+  margin: 6rem 0;
+}

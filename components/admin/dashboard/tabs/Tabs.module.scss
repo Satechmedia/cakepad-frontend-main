@@ -1,0 +1,65 @@
+@import "@/styles/imports";
+
+.tabs {
+  @include flex(flex-start, flex-start, column);
+  margin-top: 4.5rem;
+  row-gap: 4.5rem;
+}
+
+.tabs_titleBar {
+  width: 100%;
+  @include flex(space-between, center);
+}
+
+.tabs_header {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.4rem;
+}
+
+.tabs_title {
+  font-size: 3.6rem;
+  line-height: 130.8%;
+  color: $col-white;
+}
+
+.tabs_subtitle {
+  font-size: 1.6rem;
+  line-height: 130.8%;
+  opacity: 0.5;
+}
+
+.tabs_titleButton {
+  @extend %btn-gold-200-outline;
+
+  height: 6rem;
+  width: 22rem;
+  border-radius: 5px;
+}
+
+.tabs_switcher {
+  width: 100%;
+  column-gap: 20%;
+  @include flex(space-between, center, nowrap);
+
+  @include media("<=mobile") {
+    @include flex(flex-start, flex-end, column);
+    row-gap: 1.5rem;
+    position: relative;
+  }
+}
+
+.tabs_container {
+  flex-grow: 1;
+  border: 1px solid $col-black-700;
+  @include grid(repeat(4, 1fr), 0, 0.5rem);
+
+  @include media("<=mobile") {
+    width: 100%;
+    order: 2;
+  }
+
+  .tabs_button {
+    padding: 2.5rem 1rem;
+  }
+}

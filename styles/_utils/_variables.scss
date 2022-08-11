@@ -1,0 +1,69 @@
+// colors
+
+$col-white: #ffffff;
+
+$col-black: #000000;
+$col-black-900: #141316;
+$col-black-800: #1b1c1e;
+$col-black-700: #1e1e29;
+$col-black-650: #1b1b1b;
+$col-black-600: #17171a;
+$col-black-550: #191b1f;
+$col-black-500: #141316;
+$col-black-400: #0f1219;
+$col-black-350: #18181c;
+$col-black-300: #161a25;
+$col-black-200: #222531;
+$col-black-100: #323546;
+
+$col-gold: #bd8f00;
+$col-gold-850: #FFC736;
+$col-gold-800: #ffb403;
+$col-gold-700: #a08131;
+$col-gold-600: #312e22;
+$col-gold-500: #f0b90b;
+$col-gold-400: #f3ba2f;
+$col-gold-300: #ffc107;
+$col-gold-250: #D5A329;
+$col-gold-200: #e0b121;
+$col-gold-150: #FFC23E;
+$col-gold-100: #ffdf7a;
+$col-gold-50: #ffeeb9;
+$col-gold-10: #fdffcd;
+$col-gold-faded: rgba(255, 238, 185, 0.17);
+$col-gold-brown: rgba($col-gold-250, 0.07);
+$col-gold-gradient: linear-gradient(
+  90deg,
+  #ffea28 -28.48%,
+  #ffc505 42.73%,
+  #ff9048 132.38%
+);
+
+$col-green: #00898c;
+$col-green-600: #31a03c;
+$col-green-500: #088f81;
+$col-green-400: #029288;
+$col-green-300: #20c075;
+$col-green-200: #20c074;
+$col-green-100: #00d27d;
+
+$col-grey: #646b80;
+$col-grey-200: #949494;
+$col-grey-100: #8c93a6;
+$col-grey-50: #a1a7bb;
+
+$col-red: #dd2c00;
+$col-red-200: #ff5722;
+$col-red-100: #fb4268;
+
+$col-blue: #2a99ff;
+$col-blue-100: #2bb3ff;
+$col-blue-200: #313da0;
+$col-blue-300: #31a0a0;
+
+$font-gilroy: "Gilroy", sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-sans: "DM Sans", sans-serif;
+$font-slab: "DIN Next Slab", sans-serif;
+
+$z-indexes: ("level-four", "level-three", "level-two", "level-one");

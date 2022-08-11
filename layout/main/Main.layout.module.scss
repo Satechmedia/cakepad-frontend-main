@@ -1,0 +1,49 @@
+@import "@/styles/imports";
+
+.layout {
+  height: 100%;
+  width: 100%;
+  background-color: $col-black-600;
+}
+
+.layout_breadcrumbs {
+  padding: 5rem 14.3rem 1.5rem;
+
+  @include media("<=tablet") {
+    padding: 5rem 7% 1.5rem;
+  }
+
+  @include media("<=mobile") {
+    padding: 5rem 4% 1.5rem;
+  }
+}
+
+.layout_breadcrumbsBtn {
+  opacity: 0.5;
+  column-gap: 1.6rem;
+  padding: 0;
+
+  @include flex(flex-start, center, nowrap);
+}
+
+.layout_breadcrumbsText {
+  font-weight: 550;
+}
+
+.layout_content {
+  position: relative;
+  padding: 5rem 14.3rem;
+  color: $col-white;
+
+  @include media("<=tablet") {
+    padding: 5rem 7%;
+  }
+
+  @include media("<=mobile") {
+    padding: 5rem 4%;
+  }
+
+  &[data-no-padding="true"] {
+    padding: 0;
+  }
+}

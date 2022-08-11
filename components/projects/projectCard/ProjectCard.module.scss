@@ -1,0 +1,149 @@
+@import "@/styles/imports";
+
+.card {
+  padding: 3rem 1.8rem;
+  border: 1px solid $col-black-700;
+  background-color: $col-black-600;
+  border-radius: 9.12229px;
+  transition: all 0.3s ease-in;
+  position: relative;
+
+  &:hover {
+    border-color: $col-gold-150;
+  }
+}
+
+.card_signal {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+}
+
+.card_meta {
+  @include flex(space-between, center, nowrap);
+}
+
+.card_header {
+  @include flex(flex-start, center);
+  column-gap: 0.5rem;
+}
+
+.card_logo {
+  @include media("<=mobile") {
+    max-width: 25%
+  }
+}
+
+.card_title {
+  @extend %title-21;
+  text-transform: capitalize;
+  
+  @include media("<=mobile") {
+    font-size: 3rem;
+  }
+}
+
+.card_socials {
+  column-gap: 1.83rem;
+  @include flex(flex-end, center, nowrap);
+}
+
+.card_description {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-transform: capitalize;
+
+  @include media("<=mobile") {
+    font-size: 1.8rem;
+    margin: 2.5rem 0;
+  }
+}
+
+.card_details {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.449rem 0;
+  column-gap: 1.7rem;
+  row-gap: 2.1rem;
+
+  @include flex(flex-start, flex-start, row wrap);
+
+  @include media("<=mobile") {
+    padding: 2.5rem 0;
+    column-gap: 3.5rem;
+    row-gap: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.card_detail {
+  span {
+    font-size: 1.3rem;
+    font-weight: 550;
+    color: $col-white;
+
+    @include media("<=mobile") {
+      font-size: 1.55rem;
+    }
+  }
+
+  span:nth-child(1) {
+    opacity: 0.5;
+  }
+}
+
+.card_stats {
+  position: relative;
+  margin-top: 1.7rem;
+  padding: 0 0.5rem;
+
+  @include media("<=mobile") {
+    margin-top: 2.5rem;
+  }
+}
+
+.card_progress {
+  width: 100%;
+  @include flex(space-between, center, nowrap);
+
+  span {
+    font-size: 1.3rem;
+    font-weight: 550;
+    color: $col-white;
+
+    @include media("<=mobile") {
+      font-size: 1.5rem;
+    }
+  }
+
+  span:nth-child(1) {
+    opacity: 0.5;
+  }
+}
+
+.card_progressBar {
+  margin: 0.5rem 0 1rem;
+
+  @include media("<=mobile") {
+    margin: 1rem 0 1.2rem;
+  }
+
+  .card_progressIndicator {
+    @include media("<=mobile") {
+      height: 1rem !important;
+    }
+  }
+}
+
+.card_ratio {
+  font-size: 1.3rem;
+  font-weight: 550;
+  text-align: center;
+
+  @include media("<=mobile") {
+    font-size: 1.6rem;
+  }
+}

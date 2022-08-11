@@ -1,0 +1,20 @@
+@import "@/styles/imports";
+
+.empty {
+  width: 100%;
+  min-height: 16rem;
+  row-gap: 3.2rem;
+
+  @include flex(center, center, column);
+}
+
+.empty_text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.empty_button {
+  padding: 1.7rem 1.5rem;
+  border-radius: 4px;
+}

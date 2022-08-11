@@ -1,0 +1,51 @@
+@import "@/styles/imports";
+
+.sidebar {
+  width: 30.4rem;
+  padding: 2.4rem 2.4rem 5.6rem;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid $col-black-200;
+  background-color: $col-black-350;
+
+  @include media("<=tablet") {
+    width: 35%;
+    flex-grow: 1;
+  }
+
+  @include media("<=mobile") {
+    width: 100%;
+  }
+}
+
+.sidebar_stat {
+  display: grid;
+  row-gap: 0.8rem;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4.3rem;
+  }
+}
+
+.sidebar_statsub {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: $col-grey-50;
+  font-family: $font-inter;
+}
+
+.sidebar_stathead {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 800;
+}
+
+.sidebar_btn {
+  width: 100%;
+  height: 5.9rem;
+  margin-top: 3rem;
+  border-radius: 7.1235px;
+}

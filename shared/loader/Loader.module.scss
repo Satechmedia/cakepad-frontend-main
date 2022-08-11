@@ -1,0 +1,19 @@
+
+@import "@/styles/imports";
+
+.loader {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  padding: 5rem;
+  opacity: 1;
+  border-radius: 8px;
+  background-color: $col-black-600;
+  @include flex(center, center);
+
+  &[data-fullscreen="true"] {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+  }
+}

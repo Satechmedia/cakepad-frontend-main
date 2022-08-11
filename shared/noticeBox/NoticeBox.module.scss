@@ -1,0 +1,29 @@
+@import "@/styles/imports";
+
+.noticeBox {
+  flex-grow: 1;
+  height: 100%;
+  padding: 5rem;
+  opacity: 0.8;
+  border-radius: 8px;
+  background-color: $col-black-700;
+  @include flex(center, center, column nowrap);
+
+  &_icon {
+    opacity: 0.6;
+  }
+
+  &_text {
+    margin: 1rem 0 0;
+    color: $col-white;
+    font-size: 1.4rem;
+    opacity: 0.7;
+    text-align: center;
+    line-height: 130%;
+  }
+
+  &_reload {
+    color: $col-gold-100;
+    cursor: pointer;
+  }
+}

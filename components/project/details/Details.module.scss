@@ -1,0 +1,97 @@
+@import "@/styles/imports";
+
+.details {
+  margin-bottom: 11.39rem;
+  @include grid(repeat(2, 1fr), 1rem, 1rem);
+
+  @include media("<=tablet") {
+    @include grid(1fr, 0, 6rem);
+  }
+}
+
+.details_iconWrap {
+  column-gap: 1rem;
+  @include flex(flex-start, center, row nowrap);
+
+  @include media("<=tablet") {
+    @include flex(center, center, column);
+  }
+}
+
+.details_badge {
+  @extend %badge-blue-100;
+  position: relative;
+
+  width: fit-content;
+  height: 2.4rem;
+  padding: 0 1rem;
+  border-radius: 2px;
+}
+
+.details_title {
+  @extend %title-48;
+  font-weight: 600;
+  width: 100%;
+  margin: 2.4rem 0;
+  max-width: 80%;
+  text-transform: capitalize;
+
+  @include media("<=tablet") {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.details_chain {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 28.0337px #fcc754, 0px 0px 7.00843px #fcc754,
+    0px 0px 14.0169px #fcc754;
+
+    @include media("<=tablet") {
+      text-align: center;
+      
+    }
+}
+
+.details_desc {
+  font-size: 1.4rem;
+  margin: 1.6rem 0;
+  max-width: 80%;
+  font-family: $font-inter;
+  text-transform: capitalize;
+
+  @include media("<=tablet") {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.details_buttons {
+  gap: 2.4rem 2.4rem;
+  @include flex(flex-start, center row nowrap);
+
+  @include media("<=tablet") {
+    @include grid(1fr, 1.5rem, 2.4rem);
+  }
+}
+
+.details_button {
+  padding: 1.5rem 5rem;
+  border-radius: 25px;
+  min-width: 16.4rem;
+
+  &:nth-of-type(2) {
+    padding: 1.5rem 3rem;
+  }
+}
+
+.details_socials {
+  column-gap: 2.6rem;
+  margin: 2.6rem 0 2.5rem;
+  @include flex(flex-start, center, nowrap);
+
+  @include media("<=tablet") {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,60 @@
+@import "@/styles/imports";
+
+.input {
+  width: 100%;
+  row-gap: 0.7rem;
+  @include flex(flex-start, flex-start, column);
+}
+
+.input_label {
+  font-size: 1.6rem;
+  line-height: 152.2%;
+  color: $col-grey-50;
+  font-family: $font-inter;
+  font-weight: 500;
+}
+
+.input_wrapper {
+  position: relative;
+  width: 100%;
+  padding: 1.4rem 1.6rem 0.8rem;
+  column-gap: 1rem;
+  background-color: $col-black-350;
+  border: 1px solid $col-black-200;
+  border-radius: 9.04453px;
+  transition: all 0.1s ease-in;
+  overflow: hidden;
+  
+
+  @include flex(flex-start, center, row nowrap);
+
+  &:focus-within {
+    transition: all 0.3s linear;
+    border-color: $col-gold-500;
+  }
+}
+
+.input_icon {
+  position: relative;
+  bottom: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+
+.input_field {
+  background-color: inherit;
+  border: none;
+  flex-grow: 1;
+  height: 100%;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+  color: inherit;
+
+  &::placeholder {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    color: $col-grey-50;
+  }
+}

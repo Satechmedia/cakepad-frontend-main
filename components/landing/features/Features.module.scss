@@ -1,0 +1,63 @@
+@import "@/styles/imports";
+
+.features {
+  padding: 0 11.6rem;
+  margin-bottom: 25.4rem;
+  @include flex(space-between, flex-start);
+
+  @include media("<=tablet") {
+    padding: 0 7%;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.features_item {
+  gap: 1.5rem;
+  @include flex(flex-start, center, row nowrap);
+
+  @include media("<=tablet") {
+    width: 100%;
+    gap: 2.5rem;
+  }
+}
+
+.feature_icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%;
+  position: relative;
+
+  @include media("<=tablet") {
+    width: 7.4rem;
+    height: 7.4rem;
+  }
+}
+
+// .features_item:nth-of-type(1) .feature_icon {
+//   background: #fdffcd;
+// }
+
+// .features_item:nth-of-type(2) .feature_icon {
+//   background: #cdf6ff;
+// }
+
+// .features_item:nth-of-type(3) .feature_icon {
+//   background: #d4ffcd;
+// }
+
+// .features_item:nth-of-type(4) .feature_icon {
+//   background: #f8cdff;
+// }
+
+.feature_text {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+  font-family: $font-slab;
+
+  @include media("<=tablet") {
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,228 @@
+@import "@/styles/imports";
+
+.header {
+  width: 100%;
+  padding: 1.5rem 6.4rem;
+  position: sticky;
+  top: 0;
+  background-color: $col-black-900;
+  z-index: z("level-three");
+
+  @include flex(flex-start, center);
+
+  &[data-transparent="true"] {
+    position: fixed;
+    background-color: rgba($col-black-600, 0.95);
+  }
+
+  @include media("<=tablet") {
+    height: 6rem !important;
+    padding: 2rem 7%;
+    @include flex(flex-start, center, row wrap);
+  }
+
+  @include media("<=mobile") {
+    padding: 2rem 4%;
+  }
+}
+
+.header_logo {
+  @include media("<=tablet") {
+    order: 1;
+  }
+
+  @include media("<=mobile") {
+    order: 1;
+  }
+}
+
+.header_button {
+  padding: 1.6rem 5.12rem;
+  height: 5rem;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: $font-inter;
+}
+
+.header_wrapper,
+.header_wrapper__collapsed {
+  flex-grow: 1;
+  transition: transform 0.3s ease-out;
+  @include flex(space-between, center);
+
+  @include media("<=tablet") {
+    order: 3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: $col-black-600;
+    z-index: 10;
+    padding: 4rem 7%;
+    transform: translateX(0);
+    @include flex(flex-start, flex-start, column);
+  }
+}
+
+.header_wrapper__collapsed {
+  @include media("<=tablet") {
+    transform: translateX(101vw);
+  }
+}
+
+.header_nav {
+  margin: 0 auto;
+  @include flex(center, center);
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.header_menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  column-gap: 5.8rem;
+
+  @include flex(space-between, center);
+
+  @include media("<=tablet") {
+    width: 100%;
+    margin-bottom: 4rem;
+    @include flex(flex-start, flex-start, column);
+  }
+}
+
+.header_menuItem {
+  margin: 0;
+  font-weight: 500;
+
+  @include media("<=tablet") {
+    margin-left: 0;
+    padding: 3rem 0;
+    width: 100%;
+    font-size: 2rem;
+    border-bottom: 1px solid $col-black-700;
+  }
+
+  a {
+    color: $col-white;
+    font-weight: 500;
+    font-size: inherit;
+    transition: all 0.2s ease-in;
+    font-family: $font-sans;
+  }
+
+  &:hover a {
+    color: $col-grey-100;
+  }
+
+  &[data-active="true"] a {
+    color: $col-gold-200;
+    opacity: 0.6;
+    font-weight: 600;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.header_collapsible {
+  cursor: pointer;
+  @include flex(space-between, center, row wrap);
+
+  @include media("<=tablet") {
+    display: none;
+  }
+
+  &Menu {
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s linear;
+    @include flex(flex-start, flex-start, column);
+  }
+
+  &MenuItem {
+    margin-top: 1rem;
+    color: $col-grey-100;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+
+    &:first-child {
+      padding-top: 1rem;
+    }
+  }
+
+  &Arrow {
+    transition: all 0.2s linear;
+  }
+}
+
+.header_collapsible__expanded {
+  .header_collapsibleArrow {
+    transform: rotate(180deg);
+  }
+
+  .header_collapsibleMenu {
+    max-height: 100vh;
+  }
+
+  .header_collapsibleMenuItem {
+    opacity: 1;
+  }
+}
+
+.header_hamburger,
+.header_hamburger__open {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  height: fit-content;
+  background: transparent;
+  border: none;
+  width: 45px;
+
+  @include media("<=tablet") {
+    order: 2;
+    margin-left: auto;
+    @include flex(center, flex-end, column nowrap);
+  }
+
+  &Bar {
+    width: 35px;
+    height: 2px;
+    background-color: $col-white;
+    margin: 0.4rem 0;
+    width: 35px;
+    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    &:nth-child(2) {
+      width: 30px;
+    }
+  }
+}
+
+.header_hamburger__open {
+  min-height: 10px;
+  position: relative;
+
+  .header_hamburgerBar {
+    width: 20px;
+  }
+
+  .header_hamburgerBar:first-child {
+    margin-bottom: -1px;
+    transform: rotate(45deg);
+  }
+
+  .header_hamburgerBar:last-child {
+    margin-top: -1px;
+    transform: rotate(-45deg);
+  }
+}

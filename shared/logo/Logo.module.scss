@@ -1,0 +1,18 @@
+@import "@/styles/imports";
+
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 12rem;
+  height: 4.191rem;
+  position: relative;
+
+  @include media("<=tablet") {
+    width: 14rem;
+  }
+
+  @include media("<=mobile") {
+    width: 14rem;
+  }
+}

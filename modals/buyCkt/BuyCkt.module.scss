@@ -1,0 +1,19 @@
+@import "@/styles/imports";
+
+.buy_button {
+  @extend %btn-gold-250;
+
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 7.1235px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+
+.buy_buttonicon {
+  width: 1.2rem;
+  height: 1.2rem;
+}

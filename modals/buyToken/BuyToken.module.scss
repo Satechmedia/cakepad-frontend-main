@@ -1,0 +1,25 @@
+@import "@/styles/imports";
+
+.buy_button {
+  width: 100%;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 7.1235px;
+}
+
+.buy_rates {
+  margin-top: 1.6rem;
+  @include flex(space-between, center, row nowrap);
+
+  span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.435rem;
+    font-family: $font-inter;
+  }
+
+  span:nth-of-type(1) {
+    color: $col-grey-50;
+  }
+}
