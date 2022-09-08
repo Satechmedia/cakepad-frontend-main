@@ -24,7 +24,7 @@ const Hero = () => {
           </Link>
 
           <Link href="/">
-            <a href="https://forms.gle/51exxJyh5BmfXrMR9" target="_blank"
+            <a href="https://forms.gle/51exxJyh5BmfXrMR9" target="_blank" rel="noreferrer"
             className={styles.hero_cta}>Apply for IDO</a>
           </Link>
 

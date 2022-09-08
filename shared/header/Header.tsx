@@ -72,7 +72,7 @@ const Header = ({ transparent }: Props) => {
           onClick={() => setShowModal(true)}
         >
           {/* Connect Wallet */}
-          Launch App
+          CKT Vesting Portal
         </Button>
       </div>
 
