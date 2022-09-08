@@ -19,12 +19,13 @@ const Hero = () => {
           of Cake projects, and develop profitable investment strategies.
         </p>
         <div className={styles.hero_buttons}>
-          <Link href="/">
+          <Link href="https://cakepad.caketools.io">
             <a className={styles.hero_cta}>Launch App</a>
           </Link>
 
           <Link href="/">
-            <a className={styles.hero_cta}>Apply for IDO</a>
+            <a href="https://forms.gle/51exxJyh5BmfXrMR9" target="_blank"
+            className={styles.hero_cta}>Apply for IDO</a>
           </Link>
 
           <Button

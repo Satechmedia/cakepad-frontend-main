@@ -14,7 +14,7 @@ const Apply = () => {
           to apply for incubation, click on the button below;
         </p>
         <Link href="/">
-          <a className={styles.apply_cta}>Apply Now</a>
+          <a href="https://forms.gle/51exxJyh5BmfXrMR9" target="_blank" rel="noreferrer" className={styles.apply_cta}>Apply Now</a>
         </Link>
       </div>
       

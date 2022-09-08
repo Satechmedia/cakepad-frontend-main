@@ -51,11 +51,11 @@ const TabBar = (): ReactElement => {
       </div>
 
       <div className={styles.tabs_extra}>
-        <Link href="#">
-          <a href="#" className={styles.tabs_cta}>
+ 
+          <a href="https://forms.gle/51exxJyh5BmfXrMR9" className={styles.tabs_cta}>
             Apply for IDO
           </a>
-        </Link>
+
       </div>
     </div>
   );

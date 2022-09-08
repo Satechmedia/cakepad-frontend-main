@@ -8,6 +8,7 @@ import {
   Features,
   Participate,
   Apply,
+  Tiers,
 } from "@/components/landing";
 import { MainLayout } from "@/layout";
 
@@ -17,6 +18,7 @@ const Home = (): ReactElement => {
       <Hero />
       <About />
       <Features />
+      <Tiers/>
       <Participate />
       <Apply />
     </>
